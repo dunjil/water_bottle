@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:water_bottle/pages/HomePage.dart';
+
 import 'pages/BottleDetailPage.dart';
 import 'pages/BottlesHomePage.dart';
+import 'pages/CheckOutPage.dart';
 import 'pages/HomePage.dart';
 import 'pages/LoginPage.dart';
-import 'pages/PlaceOrderPage.dart';
+import 'pages/OtpPage.dart';
 import 'pages/SignupPage.dart';
 import 'utils/sizeconfig.dart';
 
@@ -17,9 +19,6 @@ class WaterBottle extends StatelessWidget {
       builder: (context, constraints) {
         return OrientationBuilder(builder: (context, orientation) {
           SizeConfig().init(constraints, orientation);
-          double hm = SizeConfig.heightMultiplier;
-          double tm = SizeConfig.textMultiplier;
-          double im = SizeConfig.imageSizeMultiplier;
           return MaterialApp(
             debugShowCheckedModeBanner: false,
             title: 'Water Bottles',
@@ -32,8 +31,9 @@ class WaterBottle extends StatelessWidget {
               LoginPage.id: (context) => LoginPage(),
               SignUpPage.id: (context) => SignUpPage(),
               BottlesHomePage.id: (context) => BottlesHomePage(),
-              PlaceOrderPage.id: (context) => PlaceOrderPage(),
+              OtpPage.id: (context) => OtpPage(),
               BottleDetailPage.id: (context) => BottleDetailPage(),
+              CheckOutPage.id: (context) => CheckOutPage(),
             },
           );
         });

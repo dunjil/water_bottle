@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:water_bottle/pages/BottlesHomePage.dart';
-import 'package:water_bottle/widgets/reusableWidgets.dart';
 import 'package:water_bottle/utils/theme_colors.dart';
-import 'package:line_icons/line_icons.dart';
+import 'package:water_bottle/widgets/reusableWidgets.dart';
 
 
 class LoginPage extends StatefulWidget {
@@ -47,7 +46,7 @@ class _LoginPageState extends State<LoginPage> {
                 isLongText: false,
                 labelText: "Password",
                 isPasswordField: true,
-                icon: Icon(LineIcons.key, size: hm*4,),),
+              ),
               SizedBox(
                 height: hm * 4.0,
               ),
@@ -56,7 +55,7 @@ class _LoginPageState extends State<LoginPage> {
           ),
         ),
       ),
-    );;
+    );
   }
   controlLogin(){
     Navigator.pushNamed(context, BottlesHomePage.id);

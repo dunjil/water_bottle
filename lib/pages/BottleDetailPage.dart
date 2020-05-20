@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:water_bottle/pages/CheckOutPage.dart';
 import 'package:water_bottle/utils/theme_colors.dart';
 
 class BottleDetailPage extends StatefulWidget {
@@ -128,9 +129,9 @@ class _BottleDetailPageState extends State<BottleDetailPage> {
                       ),
                       child: IconButton(
                         onPressed: () {
-                          print("Add to shopping cart");
+                          Navigator.pushNamed(context, CheckOutPage.id);
                         },
-                        icon: Icon(Icons.add_shopping_cart, color: Colors.white,
+                        icon: Icon(Icons.shopping_cart, color: Colors.white,
                           size: 25,),
                       ),
                     ),
